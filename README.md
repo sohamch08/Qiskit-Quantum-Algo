@@ -32,7 +32,7 @@ Let's first assume for simplicity that $\varphi$ can have an exact binary expans
 Suppose that we initialize $q$ in the state $|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}$. What happens if we apply the *controlled*-$U^{2^t}$ gate, with $q$ being the control, given that the target is an eigenstate of $U$ ?
 
 Let $|\Psi \rangle$ be the eigenstate of $U$ with eigenvalue $e^{i 2\pi \varphi}$, we have
-$$|+\rangle |\Psi \rangle = \left(\frac{|0\rangle + |1\rangle}{\sqrt{2}}\right) |\Psi \rangle = \frac{|0\rangle |\Psi \rangle + |1\rangle |\Psi \rangle}{\sqrt{2}} \xrightarrow{\text{controlled-}U^{2^t}} \frac{|0\rangle |\Psi \rangle + e^{i 2 \pi 2^{t} \varphi} |1\rangle |\Psi \rangle}{\sqrt{2}} = \left(\frac{|0\rangle  + e^{i 2 \pi 2^{t} \varphi} |1\rangle}{\sqrt{2}}\right) |\Psi \rangle.$$
+$$|+\rangle |\Psi \rangle = \left(\frac{|0\rangle + |1\rangle}{\sqrt{2}}\right) |\Psi \rangle = \frac{|0\rangle |\Psi \rangle + |1\rangle |\Psi \rangle}{\sqrt{2}} \overset{C\left(U^{2^t}\right)}{\longrightarrow} frac{|0\rangle |\Psi \rangle + e^{i 2 \pi 2^{t} \varphi} |1\rangle |\Psi \rangle}{\sqrt{2}} = \left(\frac{|0\rangle  + e^{i 2 \pi 2^{t} \varphi} |1\rangle}{\sqrt{2}}\right) |\Psi \rangle.$$
 
 The qubits on the eigenstate remains unchanged, while a phase of $e^{i 2 \pi 2^{t} \varphi}$ has been "kicked back" (similar to phase kickback in the Grover's algorithm) into the state of the auxiliary qubit $q$.
 
